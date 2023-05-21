@@ -49,18 +49,21 @@
                 android:textColor="?attr/colorOnPrimary"
                 android:textSize="14sp"
                 />
+
             <EditText
                 android:id="@+id/answer"
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="40dp"
-                android:hint="(to be)"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:hint="(to be)"
                 android:textAlignment="gravity"
-                android:textSize="14sp"
+                android:textAllCaps="false"
                 android:textColor="?attr/colorOnPrimary"
-                android:textColorHint="?attr/colorOnPrimary"
-                />
+                android:textColorHint="#FF888888"
+
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
 

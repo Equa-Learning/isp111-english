@@ -37,7 +37,7 @@ class CheckupActivity : AppCompatActivity() {
         for (i in 0 until questionsList.childCount) {
             val questionView = questionsList.getChildAt(i)
             val editText = questionView.findViewById<EditText>(R.id.answer)
-            if (editText.text.toString() == correctAnswers[i])
+            if (editText.text.toString().lowercase() == correctAnswers[i])
                 goodPointsCounter += 1
         }
         userService.goodPoints = goodPointsCounter

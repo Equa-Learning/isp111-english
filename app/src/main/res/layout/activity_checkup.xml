@@ -57,8 +57,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="12dp"
-                    android:text="Ответь на вопросы:"
+                    android:layout_marginBottom="16dp"
+                    android:text="В переводе фразы подставь вместо (to be) нужную форму этого глагола:"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="14sp" />
 

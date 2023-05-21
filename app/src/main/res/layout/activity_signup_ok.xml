@@ -38,7 +38,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
                 android:text="Регистрация успешно завершена!"
-                android:textColor="#FFFFFF"
+                android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp"
                 />
             <Button
@@ -48,9 +48,9 @@
                 android:minHeight="48dp"
                 android:textAllCaps="false"
                 android:text="@string/signup_button_back"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
-                android:onClick="goToSignIn"
+                android:textColor="?attr/colorOnSecondary"
+                android:backgroundTint="?attr/colorSecondary"
+                android:onClick="goBack"
                 />
 
         </LinearLayout>
