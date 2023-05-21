@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_indigo"
+    tools:context=".activities.SigninActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainscroll"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_max="450dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/signin_formfields"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/mainscroll"
+            android:orientation="vertical"
+
+            android:layout_marginHorizontal="16dp"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:minHeight="134dp"
+                android:scaleType="matrix"
+
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="96dp"
+                android:contentDescription="@string/logo_contentDescription"
+                android:src="@drawable/logo_worldcinema1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <EditText
+                android:id="@+id/signinEmailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+
+                android:autofillHints="emailAddress"
+                android:hint="@string/signin_hint_email"
+
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/greyAF"
+
+                android:textColorHint="@color/greyA8"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="@id/logo" />
+
+            <EditText
+                android:id="@+id/signinPasswordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:layout_marginBottom="16dp"
+                android:autofillHints="password"
+
+                android:hint="@string/signin_hint_pass"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingHorizontal="16dp"
+
+                android:textColor="@color/greyAF"
+                android:textColorHint="@color/greyA8"
+                android:textSize="18sp" />
+            <CheckBox
+                android:id="@+id/rememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Запомнить данные"
+                android:drawableStart="@drawable/check"
+                android:button="@null"
+                android:textColor="@color/greyAF"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/greyA8"
+                android:textSize="18sp"
+                ></CheckBox>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                />
+            <LinearLayout
+                android:id="@+id/signin_formbuttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+
+                android:layout_gravity="bottom"
+
+                android:orientation="vertical"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="450dp"
+                >
+
+                <Button
+                    android:id="@+id/enter"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:minHeight="48dp"
+                    android:text="@string/signin_button_enter"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/orange"
+                    android:onClick="doLogin"
+                    />
+
+                <Button
+                    android:id="@+id/registration"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/signin_button_register"
+                    android:textColor="@color/orange"
+                    android:backgroundTint="@color/white"
+                    android:onClick="goToRegistration"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
