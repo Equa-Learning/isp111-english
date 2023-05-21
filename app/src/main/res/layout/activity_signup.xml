@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_indigo"
+    android:background="?attr/colorPrimary"
     tools:context=".activities.SignupActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -37,17 +37,17 @@
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
 
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="68dp"
+                android:layout_marginTop="40dp"
 
                 android:contentDescription="@string/logo_contentDescription"
                 android:maxWidth="111dp"
                 android:maxHeight="72dp"
                 android:minHeight="72dp"
-                android:scaleType="matrix"
-                android:src="@drawable/logo_worldcinema1"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_transp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,9 +66,9 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:paddingHorizontal="16dp"
-                android:textColor="@color/greyAF"
+                android:textColor="?attr/colorOnPrimary"
 
-                android:textColorHint="@color/greyA8"
+                android:textColorHint="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="@id/logo" />
             <EditText
@@ -82,9 +82,9 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:paddingHorizontal="16dp"
-                android:textColor="@color/greyAF"
+                android:textColor="?attr/colorOnPrimary"
 
-                android:textColorHint="@color/greyA8"
+                android:textColorHint="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="@id/name" />
             <EditText
@@ -100,9 +100,9 @@
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:paddingHorizontal="16dp"
-                android:textColor="@color/greyAF"
+                android:textColor="?attr/colorOnPrimary"
 
-                android:textColorHint="@color/greyA8"
+                android:textColorHint="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="@id/lastName" />
 
@@ -120,8 +120,8 @@
                 android:minHeight="48dp"
                 android:paddingHorizontal="16dp"
 
-                android:textColor="@color/greyAF"
-                android:textColorHint="@color/greyA8"
+                android:textColor="?attr/colorOnPrimary"
+                android:textColorHint="?attr/colorOnPrimary"
                 android:textSize="18sp" />
 
             <EditText
@@ -137,14 +137,14 @@
                 android:minHeight="48dp"
                 android:paddingHorizontal="16dp"
 
-                android:textColor="@color/greyAF"
-                android:textColorHint="@color/greyA8"
+                android:textColor="?attr/colorOnPrimary"
+                android:textColorHint="?attr/colorOnPrimary"
                 android:textSize="18sp" />
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="@integer/material_motion_duration_long_1"
+                android:layout_weight="100"
                 />
             <LinearLayout
                 android:id="@+id/signin_formbuttons"
@@ -172,8 +172,8 @@
                     android:layout_marginBottom="16dp"
                     android:minHeight="48dp"
                     android:text="@string/signup_button_doRegister"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/orange"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:backgroundTint="?attr/colorSecondary"
                     android:onClick="doRegistration"
                     />
 
@@ -184,8 +184,8 @@
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
                     android:text="@string/signup_button_haveAccount"
-                    android:textColor="@color/orange"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="?attr/colorSecondaryVariant"
+                    android:textColor="?attr/colorOnSecondary"
                     android:onClick="goToSignIn"
                     />
             </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_indigo"
+    android:background="?attr/colorPrimary"
     tools:context=".activities.SignupOkActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -50,7 +50,7 @@
                 android:text="@string/signup_button_back"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/orange"
-                android:onClick="goBack"
+                android:onClick="goToSignIn"
                 />
 
         </LinearLayout>

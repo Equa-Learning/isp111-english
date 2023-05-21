@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_indigo"
-    tools:context=".activities.ChooseVersionActivity">
+    android:background="?attr/colorPrimary"
+    tools:context=".activities.ChooseLessonActivity">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/mainscroll"
@@ -22,7 +22,6 @@
         >
 
         <LinearLayout
-            android:id="@+id/signin_formfields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -33,25 +32,36 @@
             app:layout_constraintBottom_toBottomOf="parent"
             >
             <TextView
+                android:id="@+id/dear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_gravity="center"
-                android:text="Выберите вариант загрузки персонажей"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                />
+                android:layout_gravity="left"
+                android:layout_marginTop="30dp"
+                android:text="Привет, ученик!"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="16dp"
+                android:text="Начинаем наши занятия, в этом приложении доступен 1 демо-урок. Итак, приступим!"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp" />
             <Button
                 android:id="@+id/local"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:textAllCaps="false"
-                android:text="Локальный"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
-                android:onClick="goToLocal"
+                android:text="Пройти урок"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="?attr/colorSecondary"
+                android:textColor="?attr/colorOnSecondary"
+                android:onClick="goToLesson"
                 />
             <Button
                 android:id="@+id/network"
@@ -59,10 +69,10 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:textAllCaps="false"
-                android:text="Через ретрофит"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
-                android:onClick="goToNetwork"
+                android:text="Сразу к проверке знаний"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:textColor="?attr/colorOnSecondary"
+                android:onClick="goToCheckup"
                 />
         </LinearLayout>
 

@@ -6,15 +6,20 @@ import android.os.Bundle
 import android.view.View
 import com.example.isp111english.R
 
-class BackToStartActivity : AppCompatActivity() {
+class LessonActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_back_to_start)
+        setContentView(R.layout.activity_lesson)
+
     }
 
-    fun goBack(view: View) {
-        var intent = Intent(this@BackToStartActivity, LaunchActivity::class.java)
-        startActivity(intent)
+    fun onBackPressed(view: View) {
         finish()
+    }
+
+    fun goToCheckup(view: View) {
+        val intent = Intent(this@LessonActivity, CheckupActivity::class.java)
+        startActivity(intent)
     }
 }

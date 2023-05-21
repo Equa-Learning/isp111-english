@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,30 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_anchor_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestTest"
-        tools:targetApi="31">
-        <activity
-            android:name=".activities.ChooseVersionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.KlausActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.KlausRetrofitActivity"
-            android:exported="false" />
+        android:usesCleartextTraffic="true"
+        tools:targetApi="29">
         <activity
             android:name=".activities.BackToStartActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.SignupActivity"
+            android:name=".activities.CheckupActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.SigninActivity"
+            android:name=".activities.CheckupResultsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.SignupOkActivity"
+            android:name=".activities.ChooseLessonActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.LaunchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +36,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.LessonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SigninActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignupOkActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

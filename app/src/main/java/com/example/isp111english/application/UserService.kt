@@ -1,6 +1,8 @@
 package com.example.isp111english.application
 
+import android.app.Activity
 import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
 import java.lang.Exception
 import java.util.regex.Pattern
 
@@ -12,8 +14,8 @@ class UserService {
         return Pattern.compile(pattern).matcher(text).matches()
     }
 
-    fun Init( value:SharedPreferences) {
-        _pref = value
+    fun Init( context: Activity ) {
+        _pref = context.getSharedPreferences("TABLEE", AppCompatActivity.MODE_PRIVATE)
     }
 
     var _pref: SharedPreferences? = null
@@ -28,11 +30,21 @@ class UserService {
 
     var rememberCredentials: Boolean
         get () {
-            return pref.getBoolean("signinDoRemember", false)
+            return pref.getBoolean(TAG_DOREMEMBER, false)
         }
         set(value) {
             var editor = pref.edit()
-            editor.putBoolean("signinDoRemember", value)
+            editor.putBoolean(TAG_DOREMEMBER, value)
+            editor.apply()
+        }
+
+    var goodPoints: Int
+        get () {
+            return pref.getInt(TAG_GOODPOINTS, -1)
+        }
+        set(value) {
+            var editor = pref.edit()
+            editor.putInt(TAG_GOODPOINTS, value)
             editor.apply()
         }
 
@@ -44,6 +56,23 @@ class UserService {
         get () {
             return pref.getString(TAG_SIGNPASS, "")
         }
+    val userFullName: String
+        get () {
+            if (userLastName == "")
+                return userName
+            if (userName == "")
+                return userLastName
+            return "$userName $userLastName"
+        }
+
+    val userName
+        get () = pref.getString(TAG_NAME, "")!!
+
+    val userLastName
+        get () = pref.getString(TAG_LASTNAME, "")!!
+
+    private val TAG_DOREMEMBER = "signinDoRemember"
+    private val TAG_GOODPOINTS = "goodPoints"
 
     private val TAG_SIGNEMAIL = "signinEmail"
     private val TAG_SIGNPASS = "signinPass"

@@ -17,7 +17,7 @@ class SignupActivity : AppCompatActivity() {
     lateinit var name: EditText
     lateinit var lname: EditText
 
-    val userService: UserService = UserService()
+    private val userService = UserService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +29,12 @@ class SignupActivity : AppCompatActivity() {
         name = findViewById(R.id.name)
         lname = findViewById(R.id.lastName)
 
-        userService.Init(getSharedPreferences("TABLEE", MODE_PRIVATE))
+        userService.Init(this)
     }
 
     fun goToSignIn(view: View) {
-        val intent = Intent(this@SignupActivity, SigninActivity::class.java)
-        startActivity(intent)
+//        val intent = Intent(this@SignupActivity, SigninActivity::class.java)
+//        startActivity(intent)
         finish()
     }
 

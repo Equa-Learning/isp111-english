@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TestTest</string>
-    <string name="logo_contentDescription">WD WorldCinema logo</string>
+    <string name="logo_contentDescription">logo</string>
     <string name="signin_hint_email">Email</string>
     <string name="signin_hint_pass">Пароль</string>
     <string name="signin_hint_pass2">Повтор пароля</string>
@@ -57,4 +57,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="lesson1">Глагол to be (быть) очень важен, потому что мы его используем для описания того, какой кто-то или что-то есть. Например, \"I am happy\" (Я счастлив), \"She is kind\" (Она добрая), \"They are smart\" (Они умные).\n\nДля начала поговорим о форме глагола to be в простом настоящем времени.\n\nКакую же форму глагола to be использовать? Она зависит от того, о ком предложение. Вот таблица, помогающая запомнить\n\nЯ - am - только для себя мы используем am\nТы, Мы, Вы, Они - are - для множественного числа всегда используем are, но слово you имеет обращение и ты и вы - в том числе и во множественном числе, поэтому оно тоже сюда попадает.\nОн/Она/Оно - is - для всех остальных форм используем is\n\nТакже важно знать, как склоняются глаголы, чтобы описывать действия в прошлом. Для глагола to be используется форма \"was\" для единственного числа (I, he, she, it) и \"were\" для множественного числа (we, you, they). \n\nНапример: \"Yesterday, I was happy\" (Вчера я был счастлив), \"Last week, they were on vacation\" (На прошлой неделе они были в отпуске). \n\nНадеюсь, эта информация помогла вам лучше понять спряжение и склонение глагола to be на английском языке.</string>
 </resources>

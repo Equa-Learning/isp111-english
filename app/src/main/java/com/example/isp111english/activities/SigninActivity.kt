@@ -26,7 +26,7 @@ class SigninActivity : AppCompatActivity() {
         pass = findViewById(R.id.signinPasswordField)
         remember = findViewById(R.id.rememberMe)
 
-        userService.Init(getSharedPreferences("TABLEE", MODE_PRIVATE))
+        userService.Init(this)
         remember.isChecked = userService.rememberCredentials
         if (remember.isChecked) {
             mail.setText(userService.signinEmail)
@@ -66,23 +66,20 @@ class SigninActivity : AppCompatActivity() {
                 if (remember.isChecked)
                     userService.saveData(mailString, passString)
 
-                goToKlaus()
+                goToLessons()
             }
         }
     }
 
-    fun goToKlaus() {
-        val intent = Intent(this@SigninActivity, ChooseVersionActivity::class.java)
+    fun goToLessons() {
+        val intent = Intent(this@SigninActivity, ChooseLessonActivity::class.java)
         startActivity(intent)
-        //finish()
+        finish()
     }
 
     fun goToRegistration(view: View) {
         val intent = Intent(this@SigninActivity, SignupActivity::class.java)
         startActivity(intent)
-        //finish()
     }
-    fun onBackPressed(view: View) {
-        finish()
-    }
+
 }
