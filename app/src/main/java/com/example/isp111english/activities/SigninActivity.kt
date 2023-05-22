@@ -37,10 +37,10 @@ class SigninActivity : AppCompatActivity() {
     fun doLogin(view: View) {
         userService.rememberCredentials = remember.isChecked
         if (!remember.isChecked)
-            userService.removeSignInPrefs()
+            userService.cleanLoginScreenData()
 
-        val mailString = mail.text.toString()
-        val passString = pass.text.toString()
+        val mailString = mail.text.toString().trim().lowercase()
+        val passString = pass.text.toString().trim()
 
         var userInputCheckStatus = userService.credentialsStatus(mailString, passString)
         when (userInputCheckStatus) {
@@ -64,7 +64,7 @@ class SigninActivity : AppCompatActivity() {
 
             UserInputCheckStatus.OK -> {
                 if (remember.isChecked)
-                    userService.saveData(mailString, passString)
+                    userService.saveLoginScreenData(mailString, passString)
 
                 goToLessons()
             }

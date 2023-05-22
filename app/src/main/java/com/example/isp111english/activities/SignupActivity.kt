@@ -39,11 +39,11 @@ class SignupActivity : AppCompatActivity() {
     }
 
     fun doRegistration(view: View) {
-        val mailString = mail.text.toString()
-        val passString = pass.text.toString()
-        val pass2String = pass2.text.toString()
-        val nameString = name.text.toString()
-        val lnameString = lname.text.toString()
+        val mailString = mail.text.toString().trim().lowercase()
+        val passString = pass.text.toString().trim()
+        val pass2String = pass2.text.toString().trim()
+        val nameString = name.text.toString().trim()
+        val lnameString = lname.text.toString().trim()
 
         if (nameString.isNullOrBlank() || lnameString.isNullOrBlank())
             Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_SHORT).show()
